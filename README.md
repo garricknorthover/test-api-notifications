@@ -7,6 +7,9 @@ Once you get Heroku set up on your machine, you can get the token into your .env
 ```
 heroku config:get -s MYTOKEN >> .env
 ```
+The Heroku app is linked to the github repo
+Which means updating the repo pushes changes to the Heroku app
+
 eventbrite start up docs are here
 https://www.eventbrite.com/developer/v3/quickstart/
 
