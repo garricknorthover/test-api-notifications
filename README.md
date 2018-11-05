@@ -1,9 +1,17 @@
 ## Testing Eventbrite API
 
+Here's the Heroku setup docs for node apps
+https://devcenter.heroku.com/articles/getting-started-with-nodejs
+
 Once you get Heroku set up on your machine, you can get the token into your .env file with this command
 ```
 heroku config:get -s MYTOKEN >> .env
 ```
+eventbrite start up docs are here
+https://www.eventbrite.com/developer/v3/quickstart/
+
+
+This is a basic request
 
 ```javascript
 import axios from 'axios'
