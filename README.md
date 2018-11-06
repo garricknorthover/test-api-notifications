@@ -1,5 +1,10 @@
 ## Testing Eventbrite API
 
+after cloning repo and having setup Heroku, you can add the Heroku remote
+```
+heroku git:remote -a fierce-wave-30199
+```
+
 Here's the Heroku setup docs for node apps
 https://devcenter.heroku.com/articles/getting-started-with-nodejs
 
@@ -7,6 +12,8 @@ Once you get Heroku set up on your machine, you can get the token into your .env
 ```
 heroku config:get -s MYTOKEN >> .env
 ```
+remember to add .env to your gitignore
+
 The Heroku app is linked to the github repo
 Which means updating the repo pushes changes to the Heroku app
 
