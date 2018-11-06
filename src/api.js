@@ -1,4 +1,5 @@
-import axios from 'axios'
+const axios = require('axios')
+
 require('dotenv').config()
 const MYTOKEN = process.env.MYTOKEN
 
