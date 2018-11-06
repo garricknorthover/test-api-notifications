@@ -17,7 +17,7 @@ https://www.eventbrite.com/developer/v3/quickstart/
 This is a basic request
 
 ```javascript
-import axios from 'axios'
+const axios = require('axios')
 
 require('dotenv').config()
 const MYTOKEN = process.env.MYTOKEN
