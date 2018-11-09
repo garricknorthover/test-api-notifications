@@ -44,21 +44,28 @@ And as I just learned 5 minutes ago, you can configure you requests with default
 const axios = require('axios')
 
 require('dotenv').config()
+const MYTOKEN = process.env.MYTOKEN
 
-axios.defaults.baseURL = 'https://www.eventbriteapi.com/v3/'
-axios.defaults.params = { token: process.env.MYTOKEN }
+axios.defaults.baseURL = 'https://www.eventbriteapi.com/v3'
+axios.defaults.params = {
+  token: MYTOKEN
+}
 
 axios
-  .get('users/me')
-  .then(res => console.log(res.data))
-  .catch(error => console.log(error))
-  
-axios
-  .get('users/me')
-  .then(res => console.log(res.data.name))
-  .catch(error => console.log(error))
+  .get('/users/me')
+  .then(res => res.data)
+  .then(data => console.log(data))
+  .catch(err => console.error(err))
 ```
 
+and with node-fetch
+```javascript
+require('dotenv').config()
+const fetch = require('node-fetch')
 
-@babel/register package is installed so you can use Quokka
-I like Quokka  https://quokkajs.com/
+fetch('https://www.eventbriteapi.com/v3/users/me?token=' + process.env.MYTOKEN)
+  .then(res => res.json())
+  .then(data => console.log(data))
+
+```
+
