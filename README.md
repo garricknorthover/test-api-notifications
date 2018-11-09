@@ -1,4 +1,4 @@
-## Testing Eventbrite API
+## Testing Ticketing APIs
 
 after cloning repo and having setup Heroku, you can add the Heroku remote
 ```
@@ -12,13 +12,13 @@ Once you get Heroku set up on your machine, you can get the token into your .env
 ```
 heroku config:get -s MYTOKEN >> .env
 ```
+If you console log requests using  ```node ---filename--.js```, 
+it will need to know where the .env file is located or have the .env in the same folder
+
 remember to add .env to your gitignore
 
 The Heroku app is linked to the github repo
 Which means updating the repo pushes changes to the Heroku app
-
-eventbrite start up docs are here
-https://www.eventbrite.com/developer/v3/quickstart/
 
 
 This is a basic request
@@ -68,4 +68,3 @@ fetch('https://www.eventbriteapi.com/v3/users/me?token=' + process.env.MYTOKEN)
   .then(data => console.log(data))
 
 ```
-
