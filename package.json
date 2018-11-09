@@ -6,6 +6,7 @@
   "author": "garricknorthover <garricknorthover@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@babel/register": "^7.0.0",
     "axios": "^0.18.0",
     "babel-core": "^6.26.3",
     "babel-preset-react-app": "^6.1.0",
